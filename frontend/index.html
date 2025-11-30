@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ethereum E-Voting – Elections</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light">
+<nav class="navbar navbar-dark bg-primary mb-4">
+  <div class="container">
+    <span class="navbar-brand">Ethereum E-Voting</span>
+    <button id="connectBtn" class="btn btn-outline-light btn-sm">Connect Wallet</button>
+  </div>
+</nav>
+
+<div class="container">
+  <h2 class="mb-3">Create New Election</h2>
+  <form id="createElectionForm" class="card p-3 mb-4 shadow-sm">
+    <div class="mb-3">
+      <label class="form-label">Title</label>
+      <input type="text" class="form-control" id="titleInput">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Description</label>
+      <textarea class="form-control" id="descriptionInput" rows="2"></textarea>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Registration Duration (seconds)</label>
+      <input type="number" class="form-control" id="regDurationInput" value="120">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Voting Duration (seconds)</label>
+      <input type="number" class="form-control" id="votDurationInput" value="120">
+    </div>
+    <button type="submit" class="btn btn-primary">Create Election</button>
+  </form>
+
+  <h2 class="mb-3">Existing Elections</h2>
+  <div id="electionsList" class="row"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
